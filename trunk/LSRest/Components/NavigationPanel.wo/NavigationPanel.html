@@ -1,0 +1,15 @@
+<wo:ERXStyleSheet filename = "main.css" />
+<div class = "hdB">
+  <div class = "bg">
+    <div class = "bgT">
+      <div class = "bgB">
+        <div id = "menu">
+          <wo:loop list = "$directActions" item = "$directAction">
+            <wo:ERXRouteLink entityName = "Chart" action = "chart" format = "json"> <wo:string value = "$directAction" /> </wo:ERXRouteLink>
+            <wo:not condition = "$isLastDirectAction">|</wo:not>
+          </wo:loop>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
