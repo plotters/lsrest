@@ -1,0 +1,212 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>LSRest</groupId>
+	<artifactId>LSRest</artifactId>
+	<version>0.0.0</version>
+	<name>LSRest</name>
+	<packaging>war</packaging>
+
+
+	<!-- <pluginManagement> <plugins> <plugin> <groupId>org.objectstyle.woproject.maven2</groupId> 
+		<artifactId>maven-wolifecycle-plugin</artifactId> <version>2.1</version> 
+		</plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-compiler-plugin</artifactId> 
+		<version>2.3.1</version> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-source-plugin</artifactId> <version>2.1.2</version> </plugin> 
+		<plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-jar-plugin</artifactId> 
+		<version>2.3.1</version> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-deploy-plugin</artifactId> <version>2.5</version> </plugin> 
+		<plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-install-plugin</artifactId> 
+		<version>2.3.1</version> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-resources-plugin</artifactId> <version>2.4.3</version> 
+		</plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
+		<version>2.6</version> </plugin> <plugin> <groupId>org.codehaus.mojo</groupId> 
+		<artifactId>build-helper-maven-plugin</artifactId> <version>1.5</version> 
+		</plugin> </plugins> </pluginManagement> -->
+
+
+
+	<repositories>
+		<repository>
+			<id>wocommunity.releases</id>
+			<name>WOCommunity Releases Repository</name>
+			<url>http://maven.wocommunity.org/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>wocommunity.snapshots</id>
+			<name>WOCommunity Snapshots Repository</name>
+			<url>http://maven.wocommunity.org/content/groups/public-snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>wocommunity.releases</id>
+			<name>WOCommunity Releases Repository</name>
+			<url>http://maven.wocommunity.org/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>wocommunity.snapshots</id>
+			<name>WOCommunity Snapshots Repository</name>
+			<url>http://maven.wocommunity.org/content/groups/public-snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+
+	<build>
+		<sourceDirectory>Sources</sourceDirectory>
+		<testSourceDirectory>Tests</testSourceDirectory>
+
+		<plugins>
+			<plugin>
+				<groupId>org.objectstyle.woproject.maven2</groupId>
+				<artifactId>maven-wolifecycle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<skipAppleProvidedFrameworks>true</skipAppleProvidedFrameworks>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<!-- <plugins> <plugin> <groupId>org.objectstyle.woproject.maven2</groupId> 
+			<artifactId>maven-japplication-plugin</artifactId> <configuration> <name>Foo</name> 
+			<mainClass>com.legalsounds.LSXDesignApplication</mainClass> <os>win</os> 
+			</configuration> <executions> <execution> <phase>package</phase> <goals> 
+			<goal>japplication</goal> </goals> </execution> </executions> </plugin> <plugin> 
+			<groupId>org.objectstyle.woproject.maven2</groupId> <artifactId>maven-wolifecycle-plugin</artifactId> 
+			<extensions>true</extensions> </plugin> </plugins> -->
+	</build>
+
+	<dependencies>
+
+ 		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+		</dependency> 
+
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.1-901.jdbc4</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.webobjects</groupId>
+			<artifactId>JavaWebObjects</artifactId>
+			<version>5.4.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.webobjects</groupId>
+			<artifactId>JavaDirectToWeb</artifactId>
+			<version>5.4.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.webobjects</groupId>
+			<artifactId>JavaEOAccess</artifactId>
+			<version>5.4.3</version>
+		</dependency>
+
+ 		<dependency>
+			<groupId>wonder.core</groupId>
+			<artifactId>ERDirectToWeb</artifactId>
+			<version>5.4-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>wonder.core</groupId>
+			<artifactId>ERPrototypes</artifactId>
+			<version>5.4-SNAPSHOT</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>wonder.ajax</groupId> <artifactId>ERCoolComponents</artifactId> 
+			<version>5.4-SNAPSHOT</version> </dependency> -->
+
+ 		<dependency>
+			<groupId>wonder.misc</groupId>
+			<artifactId>WOLips</artifactId>
+			<version>5.4-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>wonder.misc</groupId>
+			<artifactId>ERSelenium</artifactId>
+			<version>5.4-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>wonder.core</groupId>
+			<artifactId>WOOgnl</artifactId>
+			<version>5.4-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>wonder.eof</groupId>
+			<artifactId>ERRest</artifactId>
+			<version>5.4-SNAPSHOT</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>wonder.utilities</groupId> <artifactId>utilities</artifactId> 
+			<version>5.4-SNAPSHOT</version> </dependency> -->
+
+		<!-- <dependency> <groupId>wonder.core</groupId> <artifactId>ERExtentions</artifactId> 
+			<version>5.4-SNAPSHOT</version> </dependency> -->
+
+		<!-- <dependency> <groupId>com.wounit</groupId> <artifactId>wounit</artifactId> 
+			<version>1.2-SNAPSHOT</version> </dependency> -->
+
+		<dependency>
+			<groupId>wonder.plugins</groupId>
+			<artifactId>PostgresqlPlugIn</artifactId>
+			<version>5.4-SNAPSHOT</version>
+		</dependency>
+
+	</dependencies>
+
+	<organization>
+		<name>EffectiveSoft</name>
+	</organization>
+</project>

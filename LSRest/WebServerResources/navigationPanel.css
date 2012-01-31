@@ -1,0 +1,18 @@
+
+.hdB {
+	padding: 13px 0 0 14px;
+}
+
+.hdB .bg {
+	background: url('images/hdb_bg_m.gif') 0 0 repeat-y;
+}
+
+.hdB .bgT {
+	background: url('images/hdb_bg_t.gif') 0 0 no-repeat;
+}
+
+.hdB .bgB {
+	background: url('images/hdb_bg_b.gif') bottom left no-repeat;
+	min-height: 37px;
+	_height: 37px;
+}

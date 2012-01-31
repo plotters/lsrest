@@ -1,0 +1,22 @@
+.hdT {
+	background: #94c11c url('images/header_bg.gif') 0 0 no-repeat;
+	min-height: 91px;
+	_height:91px; /* IE */
+}
+
+#logo {
+	float: left;
+	height: 61px;
+	margin: 15px 51px 0 10px;
+	width: 196px;
+}
+
+#header-likes {
+    padding-top: 10px;
+    padding-left: 30px;
+    height: 24px;
+    float: left;
+}
+#header-likes .fb-like {
+    vertical-align: top;
+}

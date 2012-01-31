@@ -1,0 +1,35 @@
+#ft {
+	border-top: 9px solid #b8b8b8;
+	margin: 15px 30px 30px 30px;
+	text-align: center;
+}
+
+#menuBot {
+	color: #1a1a1a;
+	font-size: 95%;
+	padding-top: 22px;
+}
+
+#menuBot A, #menuBot A:visited, #menuBot A:hover {
+	color: #1a1a1a;
+	margin: 0 3px;
+}
+
+#menuBot A:hover {
+	text-decoration: none;
+}
+
+#ft P {
+	color: #3f3f3f;
+	font-size: 80%;
+	padding-top: 9px;
+}
+
+#ft .logo {
+	padding-top: 11px;
+}
+
+#ft .logo IMG {
+	height: 39px;
+	width: 36px;
+}
